@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "NewController.h"
+#import "CeshiDay522/CeshiDay522.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) BloomiFs *bloomifs;
 
 @end
 
@@ -16,7 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    self.bloomifs = [[BloomiFs alloc]initWithString:@"测试机"];
+}
+- (IBAction)clickme:(id)sender {
+    NewController *nc = [[NewController alloc]init];
+    
+    [self.navigationController pushViewController:nc animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

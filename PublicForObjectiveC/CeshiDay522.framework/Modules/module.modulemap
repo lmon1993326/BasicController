@@ -1,0 +1,6 @@
+framework module CeshiDay522 {
+  umbrella header "CeshiDay522.h"
+
+  export *
+  module * { export * }
+}
